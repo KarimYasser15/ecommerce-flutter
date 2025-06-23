@@ -4,16 +4,16 @@ import 'package:ecommerce/core/error/exception.dart';
 import 'package:ecommerce/features/auth/data/data_source/remote/auth_remote_data_source.dart';
 import 'package:ecommerce/features/auth/data/models/login_request.dart';
 import 'package:ecommerce/features/auth/data/models/login_response.dart';
+import 'package:ecommerce/features/auth/data/models/sign_up_request.dart';
 import 'package:ecommerce/features/auth/data/models/sign_up_response.dart';
-import 'package:ecommerce/features/auth/data/models/signup_request.dart';
+import 'package:injectable/injectable.dart';
 
+@Singleton(as: AuthRemoteDataSource)
 class AuthApiRemoteDataSource implements AuthRemoteDataSource {
-  final Dio _dio = Dio(
-    BaseOptions(
-      baseUrl: ApiConstants.baseUrl,
-      receiveDataWhenStatusError: true,
-    ),
-  );
+  const AuthApiRemoteDataSource(this._dio);
+
+  final Dio _dio;
+
   @override
   Future<LoginResponse> login(LoginRequest loginRequest) async {
     try {

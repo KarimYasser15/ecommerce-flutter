@@ -8,7 +8,7 @@ import 'package:ecommerce/core/utils/ui_utils.dart';
 import 'package:ecommerce/core/utils/validator.dart';
 import 'package:ecommerce/core/widgets/custom_elevated_button.dart';
 import 'package:ecommerce/core/widgets/custom_text_field.dart';
-import 'package:ecommerce/features/auth/data/models/signup_request.dart';
+import 'package:ecommerce/features/auth/data/models/sign_up_request.dart';
 import 'package:ecommerce/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:ecommerce/features/auth/presentation/cubit/auth_states.dart';
 import 'package:flutter/material.dart';
